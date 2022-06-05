@@ -24,6 +24,8 @@ public class Booking extends javax.swing.JInternalFrame {
      */
     public Booking() {
         initComponents();
+        jSpinner.setDateFormatString("dd MMMM yyyy  HH:mm:00");
+        jSpinner.setDate(new Date());
         tampil_tabel_booking();
     }
 
@@ -36,64 +38,56 @@ public class Booking extends javax.swing.JInternalFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jSpinFieldBeanInfo1 = new com.toedter.components.JSpinFieldBeanInfo();
         buttonGroup1 = new javax.swing.ButtonGroup();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
         tnama = new javax.swing.JTextField();
         tno = new javax.swing.JTextField();
         jLabel8 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tabel_barang_booking = new javax.swing.JTable();
         jLabel6 = new javax.swing.JLabel();
-        tdeskripsi = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
-        tharga = new javax.swing.JTextField();
         jLabel11 = new javax.swing.JLabel();
-        tpaket = new javax.swing.JTextField();
         jLabel12 = new javax.swing.JLabel();
         btntambah = new javax.swing.JButton();
         jLabel9 = new javax.swing.JLabel();
         tjumlah = new javax.swing.JTextField();
         jLabel13 = new javax.swing.JLabel();
-        jdate = new com.toedter.calendar.JDateChooser();
-        twaktu = new javax.swing.JTextField();
+        tharga = new javax.swing.JLabel();
+        tdeskripsi = new javax.swing.JLabel();
+        tpaket = new javax.swing.JTextField();
+        jButton1 = new javax.swing.JButton();
+        jSpinner = new com.toedter.calendar.JSpinnerDateEditor();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
 
         setClosable(true);
         setMaximizable(true);
         setResizable(true);
-        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        setTitle("Booking");
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(51, 0, 255));
-        jLabel1.setText("CIBIRU STORE");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 20, -1, -1));
+        jLabel1.setForeground(new java.awt.Color(102, 102, 255));
+        jLabel1.setText("KING-BER STORE");
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel2.setText("BOOKING TEMPAT");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 50, -1, -1));
 
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 11)); // NOI18N
         jLabel3.setText("Nama Lengkap");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 330, -1, -1));
 
+        jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 11)); // NOI18N
         jLabel4.setText("No. Handphone");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 390, -1, -1));
-
-        jLabel5.setText("Waktu");
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 430, -1, -1));
-        getContentPane().add(tnama, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 330, 264, 30));
 
         tno.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 tnoActionPerformed(evt);
             }
         });
-        getContentPane().add(tno, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 380, 264, 30));
-        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 260, -1, -1));
 
         tabel_barang_booking.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -106,6 +100,7 @@ public class Booking extends javax.swing.JInternalFrame {
                 "Nama Paket", "Deskripsi", "Harga"
             }
         ));
+        tabel_barang_booking.setRowHeight(30);
         tabel_barang_booking.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 tabel_barang_bookingMouseClicked(evt);
@@ -116,32 +111,24 @@ public class Booking extends javax.swing.JInternalFrame {
             tabel_barang_booking.getColumnModel().getColumn(1).setMinWidth(300);
         }
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 120, 550, 160));
-
+        jLabel6.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
         jLabel6.setText("Paket yang dipilih");
-        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 280, -1, -1));
 
-        tdeskripsi.setEnabled(false);
-        getContentPane().add(tdeskripsi, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 360, 256, 91));
-
+        jLabel7.setFont(new java.awt.Font("Segoe UI", 0, 11)); // NOI18N
         jLabel7.setText("Nama Paket");
-        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 320, -1, -1));
 
+        jLabel10.setFont(new java.awt.Font("Segoe UI", 0, 11)); // NOI18N
         jLabel10.setText("Harga");
-        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 470, -1, -1));
 
-        tharga.setEnabled(false);
-        getContentPane().add(tharga, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 470, 256, 35));
-
+        jLabel11.setFont(new java.awt.Font("Segoe UI", 0, 11)); // NOI18N
         jLabel11.setText("Deskripsi");
-        getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 350, -1, -1));
 
-        tpaket.setEnabled(false);
-        getContentPane().add(tpaket, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 310, 256, 35));
-
+        jLabel12.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
         jLabel12.setText("Silahkan Pilih Paket");
-        getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 90, -1, -1));
 
+        btntambah.setBackground(new java.awt.Color(0, 153, 51));
+        btntambah.setFont(new java.awt.Font("Segoe UI", 0, 11)); // NOI18N
+        btntambah.setForeground(new java.awt.Color(255, 255, 255));
         btntambah.setText("Tambah");
         btntambah.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -153,16 +140,171 @@ public class Booking extends javax.swing.JInternalFrame {
                 btntambahActionPerformed(evt);
             }
         });
-        getContentPane().add(btntambah, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 520, -1, -1));
 
+        jLabel9.setFont(new java.awt.Font("Segoe UI", 0, 11)); // NOI18N
         jLabel9.setText("Jumlah Pesanan");
-        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 480, -1, -1));
-        getContentPane().add(tjumlah, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 470, 70, 30));
 
-        jLabel13.setText("Tanggal");
-        getContentPane().add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 430, -1, -1));
-        getContentPane().add(jdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 430, -1, -1));
-        getContentPane().add(twaktu, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 430, 70, -1));
+        jLabel13.setFont(new java.awt.Font("Segoe UI", 0, 11)); // NOI18N
+        jLabel13.setText("Waktu Booking");
+
+        tharga.setFont(new java.awt.Font("Eras Medium ITC", 1, 12)); // NOI18N
+        tharga.setText("Harga Paket");
+
+        tdeskripsi.setFont(new java.awt.Font("Eras Medium ITC", 1, 12)); // NOI18N
+        tdeskripsi.setText("Deskripsi Paket");
+
+        tpaket.setEditable(false);
+
+        jButton1.setBackground(new java.awt.Color(102, 102, 255));
+        jButton1.setFont(new java.awt.Font("Segoe UI", 0, 11)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
+        jButton1.setText("Reset");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
+        jSpinner.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                jSpinnerStateChanged(evt);
+            }
+        });
+
+        jLabel5.setFont(new java.awt.Font("Dialog", 1, 36)); // NOI18N
+        jLabel5.setText("<--");
+
+        jLabel14.setFont(new java.awt.Font("Dialog", 1, 36)); // NOI18N
+        jLabel14.setText("-->");
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(360, 360, 360)
+                        .addComponent(jLabel12))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(30, 30, 30)
+                        .addComponent(jLabel8)
+                        .addGap(70, 70, 70)
+                        .addComponent(jLabel14)
+                        .addGap(25, 25, 25)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 550, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(20, 20, 20)
+                        .addComponent(jLabel5))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(100, 100, 100)
+                        .addComponent(jLabel6))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(40, 40, 40)
+                        .addComponent(jLabel7)
+                        .addGap(50, 50, 50)
+                        .addComponent(tpaket, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(80, 80, 80)
+                        .addComponent(jLabel3)
+                        .addGap(64, 64, 64)
+                        .addComponent(tnama, javax.swing.GroupLayout.PREFERRED_SIZE, 264, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(40, 40, 40)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel11)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(10, 10, 10)
+                                .addComponent(jLabel10)))
+                        .addGap(63, 63, 63)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(tdeskripsi, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(tharga, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(30, 30, 30)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel4)
+                            .addComponent(jLabel13)
+                            .addComponent(jLabel9))
+                        .addGap(57, 57, 57)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(tno, javax.swing.GroupLayout.PREFERRED_SIZE, 264, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(tjumlah, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(580, 580, 580)
+                        .addComponent(btntambah, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(30, 30, 30)
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(40, 40, 40)
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel2)
+                .addGap(72, 72, 72))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addComponent(jLabel1)
+                        .addGap(25, 25, 25))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel2)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)))
+                .addComponent(jLabel12)
+                .addGap(35, 35, 35)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(140, 140, 140)
+                        .addComponent(jLabel8))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(60, 60, 60)
+                        .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(50, 50, 50)
+                        .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(20, 20, 20)
+                .addComponent(jLabel6)
+                .addGap(35, 35, 35)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(tpaket, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tnama, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel7)
+                            .addComponent(jLabel3))))
+                .addGap(20, 20, 20)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(20, 20, 20)
+                        .addComponent(jLabel11)
+                        .addGap(55, 55, 55)
+                        .addComponent(jLabel10))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(tdeskripsi, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, 0)
+                        .addComponent(tharga, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addComponent(jLabel4)
+                        .addGap(35, 35, 35)
+                        .addComponent(jLabel13)
+                        .addGap(25, 25, 25)
+                        .addComponent(jLabel9))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(tno, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(20, 20, 20)
+                        .addComponent(jSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(10, 10, 10)
+                        .addComponent(tjumlah, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btntambah, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
+        );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -184,43 +326,63 @@ public class Booking extends javax.swing.JInternalFrame {
          tharga.setText(hrg);
     }//GEN-LAST:event_tabel_barang_bookingMouseClicked
 
-    private void btntambahMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btntambahMouseClicked
+    private void jSpinnerStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jSpinnerStateChanged
         // TODO add your handling code here:
-    }//GEN-LAST:event_btntambahMouseClicked
+
+    }//GEN-LAST:event_jSpinnerStateChanged
 
     private void btntambahActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btntambahActionPerformed
         // TODO add your handling code here:
         String nama_paket = tpaket.getText();
-        String deskripsi = tdeskripsi.getText();
         int harga = Integer.parseInt(tharga.getText());
         String nama_lengkap = tnama.getText();
-        int no_hp = Integer.parseInt(tno.getText());
-    
-        Date tanggal = (Date) jdate.getDate();
-        SimpleDateFormat oDateFormat = new SimpleDateFormat("yyyy-MM-dd");
-        String tanggalDate = oDateFormat.format(tanggal);
-        
-        String time = twaktu.getText();
-        
+        String no_hp = tno.getText();
+
+        SimpleDateFormat oDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        String tanggal = oDateFormat.format(jSpinner.getDate());
+
         int jumlah_pesanan = Integer.parseInt(tjumlah.getText());
-        
+        int total = (harga * jumlah_pesanan) + 10000;
+
         try {
-            String query = "INSERT INTO booking (nama_lengkap,no_hp,tanggal,waktu,nama_paket,jumlah_pesanan) VALUES ('"+nama_lengkap+"','"+no_hp+"','"+tanggalDate+"','"+time+"','"+nama_paket+"','"+jumlah_pesanan+"')";
-            
+            String query = "INSERT INTO booking (nama_lengkap,no_hp,tanggal,nama_paket,jumlah_pesanan,total) VALUES "
+            + "('"+nama_lengkap+"','"+no_hp+"','"+tanggal+"','"+nama_paket+"','"+jumlah_pesanan+"','"+total+"')";
+
             Connection conn = testkoneksi.configDB();
-            
+
             PreparedStatement s = conn.prepareStatement(query);
-            
+
             s.execute();
-            
-            JOptionPane.showMessageDialog(null, "Data Barang Berhasil Ditambahkan");
-            
+
+            JOptionPane.showMessageDialog(null, "Invoice Pemesanan" +
+                "\nPaket yang Dipilih   : " +nama_paket +
+                "\nNama Pemesan     : "+nama_lengkap +
+                "\nTanggal Bukber       : "+tanggal +
+                "\nJumlah Pesanan     : "+jumlah_pesanan +
+                "\nTotal                          : "+total);
+
         } catch (Exception e) {
-            JOptionPane.showMessageDialog(null, "Data Barang Gagal Ditambahkan");
+            JOptionPane.showMessageDialog(null, "Booking Gagal");
+            JOptionPane.showMessageDialog(this, "Meja Sudah Habis! Restoran Penuh!");
             JOptionPane.showMessageDialog(this, e.getMessage());
+            
         }
         tampil_tabel_booking();
     }//GEN-LAST:event_btntambahActionPerformed
+
+    private void btntambahMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btntambahMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btntambahMouseClicked
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        tpaket.setText("");
+        tdeskripsi.setText("");
+        tharga.setText("");
+        tnama.setText("");
+        tno.setText("");
+        tjumlah.setText("");
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     private void tampil_tabel_booking(){
         DefaultTableModel tb = new DefaultTableModel();
@@ -250,11 +412,13 @@ public class Booking extends javax.swing.JInternalFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btntambah;
     private javax.swing.ButtonGroup buttonGroup1;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -264,15 +428,13 @@ public class Booking extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JScrollPane jScrollPane1;
-    private com.toedter.components.JSpinFieldBeanInfo jSpinFieldBeanInfo1;
-    private com.toedter.calendar.JDateChooser jdate;
+    private com.toedter.calendar.JSpinnerDateEditor jSpinner;
     private javax.swing.JTable tabel_barang_booking;
-    private javax.swing.JTextField tdeskripsi;
-    private javax.swing.JTextField tharga;
+    private javax.swing.JLabel tdeskripsi;
+    private javax.swing.JLabel tharga;
     private javax.swing.JTextField tjumlah;
     private javax.swing.JTextField tnama;
     private javax.swing.JTextField tno;
     private javax.swing.JTextField tpaket;
-    private javax.swing.JTextField twaktu;
     // End of variables declaration//GEN-END:variables
 }
