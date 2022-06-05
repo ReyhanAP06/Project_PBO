@@ -330,12 +330,14 @@ public class MenuAwal extends javax.swing.JInternalFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-        String nama = tnama3.getText();
+        String nama = tnama1.getText();
+        String deskripsi = tnama2.getText();
+        int harga = Integer.parseInt(tnama3.getText());
         int stok = Integer.parseInt(tnama4.getText());
         int id = Integer.parseInt(tid.getText());
         
         try {
-            String query = "UPDATE data_barang SET nama='"+nama+"', stok='"+stok+"' WHERE id='"+id+"'";
+            String query = "UPDATE data_barang SET nama_paket='"+nama+"', deskripsi='"+deskripsi+"', harga='"+harga+"', stok='"+stok+"' WHERE id='"+id+"'";
             
             Connection conn = testkoneksi.configDB();
             
